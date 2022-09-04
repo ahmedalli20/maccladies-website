@@ -67,3 +67,36 @@ header {
     /* border-radius: 7px; */
 
 }
+
+
+ #products{
+    /* text-align: center;
+    font-size: 3rem; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+  
+
+ }
+
+ .card{
+     width: 25%;
+     box-shadow: 0 0 4px  ;
+     text-align: center;
+     padding: 1.5em;
+     margin-bottom: 2em ;  
+ }
+
+ .title{
+    font-size: 1.3rem;
+ }
+ .category,.price{
+     font-weight: bold;
+     text-transform: capitalize;
+     margin: 1em;
+    font-size: 1.2rem;
+ }
+ .images{
+     width: 80%;
+     height: 350px;
+ }
