@@ -18,6 +18,7 @@ const productUrl = "https://fakestoreapi.com/products"
           <p>${values.description}</p>
           <p class="category">${values.category}</p>
           <p class="price">${values.price}</p> 
+          <button class="buy">Add to Cart</button>
     </div>`
   });
   document.getElementById("products").innerHTML =item1;
@@ -27,3 +28,26 @@ const productUrl = "https://fakestoreapi.com/products"
     console.log(err);
 
 }) 
+
+
+function emailAddress(){
+    let email=document.querySelector('#form')
+    let p=document.createElement('p')
+    p.className="thanks-p"
+    
+    email.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        // console.log("done")
+         
+
+         p.textContent='Thank you for subscribing. Please check your Email for more informtion'
+        email.reset()
+        
+
+    })
+    
+    document.querySelector('#form').append(p)
+}
+emailAddress()
+
+
