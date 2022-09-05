@@ -1,33 +1,34 @@
-const productUrl = "https://fakestoreapi.com/products"
+function fetchProducts(){
+  fetch("https://fakestoreapi.com/products")
+  .then(resp => resp.json())
+  .then(products => products.forEach(product => renderProduct(product)))
+}
 
-  const product = document.querySelector(".products")
+function renderProduct(product){
+  const card = document.createElement("div")
+  card.className = "card"
+  card.innerHTML = `
+    <h1 class="title">${product.title}</h1>
+    <img src=${product.image} alt="image" class="images">
+    <p>${product.description}</p>
+    <p class="category">${product.category}</p>
+    <p class="price">${product.price}</p> 
+    <button class="buy">Add to Cart</button>
+  `
 
-  fetch(productUrl)
-    .then((data) => {
-    // console.log(data);
-    return data.json();
-})
+  card.querySelector(".buy").addEventListener("click", ()=>{
+    
+    let items = parseInt(document.getElementById("myCart").textContent)
+    items += 1
+    document.getElementById("myCart").textContent = items
+    
+  })
 
-.then((response)=>{
-    //   console.log(response); 
- let item1=""; 
-  response.map((values)=>{
-    item1+=` <div class="card">
-          <h1 class="title">${values.title}</h1>
-          <img src=${values.image} alt="image" class="images">
-          <p>${values.description}</p>
-          <p class="category">${values.category}</p>
-          <p class="price">${values.price}</p> 
-          <button class="buy">Add to Cart</button>
-    </div>`
-  });
-  document.getElementById("products").innerHTML =item1;
+  document.getElementById("products").appendChild(card)
 
-}).catch((err)=>{
+}
 
-    console.log(err);
-
-}) 
+fetchProducts()
 
 
 function emailAddress(){
@@ -49,5 +50,6 @@ function emailAddress(){
     document.querySelector('#form').append(p)
 }
 emailAddress()
+
 
 
