@@ -98,6 +98,46 @@ header {
   border-radius: 6px;
 }
 
+.email-box{
+    height: 500px;
+    padding-top: 100px;
+    text-align: center;
+    line-height: 40px;
+   
+}
+#main-p{
+    font-size: 60px;
+    padding-bottom: 20px;
+    color: #E50914;
+    line-height: 70px;
+
+}
+.same{
+    font-size: 30px;
+}
+#form{
+    padding-top: 70px;
+}
+
+#email{
+    padding: 15px 120px;
+    border: none;
+    border-radius: 4px;
+
+    
+}
+.thanks-p{
+    padding-top:50px;
+}
+
+#free-trial{
+    padding: 15px 55px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
