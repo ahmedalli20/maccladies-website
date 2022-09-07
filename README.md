@@ -33,7 +33,7 @@
  * Open the index file from the zipped file with any browser.
 
 ## Live Link
-  * Click this link to view the live application
+  * Click this link to view the live application https://ahmedalli20.github.io/maccladies-website/
 
 ## Technology Used
  * HTML - which was used to develop the structure of the pages.
